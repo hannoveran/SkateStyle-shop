@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Мамчук Анна">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Jacques+Francois&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <title>Ковзани</title>
+    <link rel="stylesheet" href="/assets/css/filter.css">
+    <link rel="stylesheet" href="/components/navbar/navbar.css">
+    <link rel="stylesheet" href="/components/features-wrap/features-wrap.css">
+    <link rel="stylesheet" href="/components/footer/footer.css">
+    <link rel="stylesheet" href="/assets/css/components/search.css">
+    <link rel="stylesheet" href="/assets/css/components/cart.css">
+    <link rel="stylesheet" href="/assets/css/category.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <div data-component="navbar"></div>
+        </header>
+
+        <h1 class="category-title"></h1>
+
+        <div class="content">
+            <aside class="filters">
+                <div id="filters">
+                    <div class="price-filter">
+                        
+                    </div>
+                </div>
+            </aside>
+            <section id="product-list" class="product-list"></section>
+        </div>
+        
+
+        <div data-component="features-wrap"></div>
+
+
+        <div data-component="footer"></div>
+
+    </div>
+
+
+    <script src="/components/navbar/navbar.js"></script>
+    <script src="/components/footer/footer.js"></script>
+    <script src="/components/features-wrap/features-wrap.js"></script>
+    <script src="/assets/js/components-init.js"></script>
+
+    <script src="/assets/js/category.js"></script>
+    <script src="/assets/js/components/cart-component.js"></script>
+    <script src="/assets/js/components/cart-init.js"></script>
+    
+    
+    <script src="/assets/js/components/search-component.js"></script>
+    <script src="/assets/js/components/search-init.js"></script>
+    <script src="/assets/js/main.js"></script>
+    
+      
+</body>
+</html>
