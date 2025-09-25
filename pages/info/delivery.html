@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Jacques+Francois&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <title>Доставка</title>
+    <link rel="stylesheet" href="/assets/css/info/delivery.css">
+    <link rel="stylesheet" href="/components/navbar/navbar.css">
+    <link rel="stylesheet" href="/components/footer/footer.css">
+    <link rel="stylesheet" href="/assets/css/components/search.css">
+    <link rel="stylesheet" href="/assets/css/components/cart.css">
+</head>
+<body>
+    <div data-component="navbar"></div>
+
+
+    <main>
+        <div class="delivery">
+            <h1>Доставка та оплата</h1>
+
+            <div class="notice">
+                <strong>Звертаємо Вашу увагу!</strong> Орієнтовні терміни доставки замовлення складають 6-10 робочих днів. Приносимо вибачення за незручності.
+            </div>
+
+            <h2>ТЕРМІН І ВАРТІСТЬ ДОСТАВКИ</h2>
+            
+            <ul>
+                <li>Доставка кур'єрською Meest ПОШТА службою (післяплата): <strong>199 UAH</strong> (з ПДВ)</li>
+                <li>Отримання в пункті відбору Meest ПОШТА: <strong>199 UAH</strong> (з ПДВ)</li>
+                <li>Отримання в пункті відбору Нова ПОШТА: <strong>199 UAH</strong> (з ПДВ)</li>
+            </ul>
+
+            <h2>Регіони до яких можлива доставка КУР'ЄРОМ:</h2>
+            
+            <div class="regions-list">
+                Вінницька, Івано-Франківська, Львівська, Тернопільська, Волинська, Полтавська, Черкаська, Житомирська, Київська, Київ, Одеська, Хмельницька, Закарпатська, Кіровоградська, Рівненська, Чернівецька
+            </div>
+
+            <p>Для замовлень понад <strong>1699 UAH</strong> кур'єрська доставка безкоштовна.</p>
+
+            <h2>Терміни доставки залежать від Вашого регіону:</h2>
+
+            <table class="delivery-table">
+                <thead>
+                    <tr>
+                        <th>Термін (роб. днів)</th>
+                        <th>Населений пункт</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>3 - 9 днів</strong></td>
+                        <td>Вінниця, Волинь, Дніпро, Житомир, Закарпаття, Запоріжжя, Івано-Франківськ, Київ, Ковель, Коломия, Кременчук, Львів, Миколаїв, Нововолинськ, Одеса, Полтава, Рівне, Суми, Тернопіль, Харків, Херсон, Хмельницький, Черкаси, Чернівці, Чернігів</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5 - 9 днів</strong></td>
+                        <td>Броди, Володимир-Волинський, Дрогобич, Камянське, Кривий Ріг, Кропивницький, Лубни, Мелітополь, Нікополь, Павлоград, Стрий, Червоноград</td>
+                    </tr>
+                    <tr>
+                        <td><strong>7 - 11 днів</strong></td>
+                        <td>Інші населені пункти</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="important">**Доставка тільки в населені пункти, контролювані Українським урядом / адміністрацією України.</p>
+
+            <h2>Важливі умови:</h2>
+            
+            <ul>
+                <li>На жаль, доставка в роздрібні магазини недоступна. Приносимо вибачення за незручності.</li>
+                <li>Можливість примірки не передбачена.</li>
+                <li>Частковий викуп речей із замовлення неможливий.</li>
+                <li>Якщо замовлення не вдається вручити за вказаною адресою з першого разу, кур'єр спробує зробити це ще раз.</li>
+                <li>Якщо посилку не буде вручено з другої спроби, вона повертається до інтернет-магазину.</li>
+            </ul>
+
+            <div class="notice">
+                <strong>Важливо!</strong> У період збільшеної кількості замовлень (періоди розпродажу, рекламні кампанії) час доставки може бути збільшений. Актуальний час, вартість та доступні форми доставки видніються при замовленні.
+            </div>
+
+            <div class="free-delivery">
+                <h2>Безкоштовна доставка</h2>
+                <p>В рамках рекламної кампанії обрані форми доставки пропонуються клієнтам безкоштовно. Інформація про акцію розміщується на головній сторінці та під час обробки замовлення. Незалежно від суми замовлення, плата за доставку стягуватися не буде.</p>
+            </div>
+        </div>
+    </main>
+
+
+    <div data-component="footer"></div>
+
+    <script src="/components/navbar/navbar.js"></script>
+    <script src="/components/footer/footer.js"></script>
+    <script src="/assets/js/components/cart-component.js"></script>
+    <script src="/assets/js/components/cart-init.js"></script>
+    <script src="/assets/js/components/search-component.js"></script>
+    <script src="/assets/js/components/search-init.js"></script>
+    <script src="/assets/js/components-init.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+main {
+    margin: 0 10vw;
+}
+
+.return h1 {
+    margin-bottom: 70px;
+}
+
+.return h3 {
+    margin-bottom: 20px;
+}
+
+.return p {
+    margin: 50px 0;
+    color: #474747;
+    letter-spacing: .49px;
+    line-height: 1.43;
+}
+
+.return h4 {
+    font-weight: bold;
+}
+
+.return ul {
+    margin: 30px 70px;
+}
+
+.return li {
+    margin-bottom: 20px;
+}
+
+.return span {
+    font-weight: bold;
+}
