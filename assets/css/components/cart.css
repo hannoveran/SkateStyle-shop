@@ -1,0 +1,356 @@
+.container {
+    margin: auto;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart span {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(35, 35, 35);
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -2px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.addCart {
+    background-color: #353432;
+    color: #eee;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.addCart:hover {
+    background-color: #2a2928;
+}
+
+.cartTab {
+    width: 400px;
+    background-color: #ffffff;
+    color: #000000;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: right 0.5s ease;
+    z-index: 1000;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cartTab:hover {
+    border-left: rgba(113, 113, 113, 0.299) 1px solid;
+}
+
+body.showCart .cartTab {
+    right: 0;
+}
+
+body {
+    transition: padding-right 0.5s ease;
+}
+
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+    border-bottom: 1px solid #eee;
+}
+
+.cartTab .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid #eee;
+}
+
+.cartTab .btn button {
+    background-color: #C7CFDE;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cartTab .btn button:hover {
+    background-color: #b8c2d3;
+}
+
+.cartTab .btn .close {
+    background-color: #eee;
+}
+
+.cartTab .btn .close:hover {
+    background-color: #ddd;
+}
+
+.cartTab a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.listCart {
+    margin: 20px 5px 0;
+    overflow: auto;
+}
+
+.listCart::-webkit-scrollbar {
+    width: 8px;
+}
+
+.listCart::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.listCart::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+.listCart::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.cartTab .listCart .item {
+    display: grid;
+    grid-template-columns: 70px 150px 80px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    padding: 10px 5px;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 10px;
+}
+
+.cartTab .listCart .item:last-child {
+    border-bottom: none;
+}
+
+.cartTab .listCart .item img {
+    width: 100%;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cartTab .listCart .item .name {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cartTab .listCart .item .totalPrice {
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.listCart .quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.listCart .quantity span {
+    display: inline-flex;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.listCart .quantity span:hover {
+    background-color: #ddd;
+}
+
+.listCart .quantity span:nth-child(2) {
+    background-color: transparent;
+    color: #000000;
+    cursor: default;
+    font-weight: 500;
+}
+
+.listCart .quantity span:nth-child(2):hover {
+    background-color: transparent;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+}
+
+.empty-cart p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.empty-cart small {
+    font-size: 12px;
+    color: #999;
+}
+
+.cart-summary {
+    border-top: 2px solid #eee;
+    margin-top: 15px;
+    padding-top: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 15px 5px 0;
+}
+
+.cart-summary .total-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.cart-summary .total-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.cart-summary .login-reminder {
+    margin: 10px 0 0 0;
+}
+
+.cart-summary .login-reminder small {
+    color: #666;
+    font-size: 12px;
+}
+
+.cart-summary .login-reminder a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.cart-summary .login-reminder a:hover {
+    color: #0056b3;
+}
+
+.cart-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    z-index: 10000;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px);
+}
+
+.cart-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .cartTab {
+        width: 100%;
+        right: -100%;
+    }
+    
+    body.showCart .cartTab {
+        right: 0;
+    }
+    
+    .cartTab .listCart .item {
+        grid-template-columns: 60px 1fr 70px 80px;
+        gap: 8px;
+        font-size: 12px;
+    }
+    
+    .cartTab .listCart .item img {
+        height: 50px;
+    }
+    
+    .cartTab .btn button {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+    
+    .cart-notification {
+        right: 10px;
+        left: 10px;
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .cartTab .listCart .item {
+        grid-template-columns: 50px 1fr 60px 70px;
+        gap: 5px;
+        font-size: 11px;
+    }
+    
+    .cartTab .listCart .item img {
+        height: 40px;
+    }
+    
+    .listCart .quantity span {
+        width: 22px;
+        height: 22px;
+        font-size: 12px;
+    }
+    
+    .cartTab h1 {
+        font-size: 18px;
+        padding: 15px;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.cartTab.animate-in {
+    animation: slideInRight 0.5s ease-out;
+}
+
+.cartTab.animate-out {
+    animation: slideOutRight 0.5s ease-in;
+}
+

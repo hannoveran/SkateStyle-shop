@@ -1,0 +1,357 @@
+.search {
+    position: relative;
+}
+
+.searchTab {
+    width: 400px;
+    background-color: #ffffff;
+    color: #000000;
+    position: fixed;
+    top: 0;
+    left: -400px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 70px auto 1fr 70px;
+    transition: left 0.5s ease;
+    z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.searchTab:hover {
+    border-right: rgba(113, 113, 113, 0.299) 1px solid;
+}
+
+body.showSearch .searchTab {
+    left: 0;
+}
+
+body {
+    transition: padding-left 0.5s ease;
+}
+
+.searchTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+    border-bottom: 1px solid #eee;
+    font-size: 1.5rem;
+}
+
+.searchTab input[type="search"] {
+    width: calc(100% - 40px);
+    height: 45px;
+    margin: 20px;
+    padding: 0 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.searchTab input[type="search"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.searchTab input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: searchfield-cancel-button;
+    cursor: pointer;
+}
+
+.searchTab .btn {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-top: 1px solid #eee;
+}
+
+.searchTab .btn button {
+    background-color: #C7CFDE;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    height: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.searchTab .btn button:hover {
+    background-color: #b8c2d3;
+}
+
+.searchTab .btn .close {
+    background-color: #eee;
+}
+
+.searchTab .btn .close:hover {
+    background-color: #ddd;
+}
+
+.listSearch {
+    margin: 0 20px;
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 10px 0;
+}
+
+.listSearch::-webkit-scrollbar {
+    width: 8px;
+}
+
+.listSearch::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.listSearch::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+.listSearch::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.listSearch .search-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.listSearch .search-item-link:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.listSearch .search-item-link:visited {
+    color: inherit;
+}
+
+.listSearch .search-item-link:active {
+    transform: translateY(0);
+}
+
+.listSearch .search-item {
+    display: grid;
+    grid-template-columns: 70px 1fr 80px;
+    gap: 12px;
+    padding: 12px;
+    align-items: center;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+}
+
+.listSearch .search-item:last-child {
+    border-bottom: none;
+}
+
+.listSearch .search-item .image {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.listSearch .search-item .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.listSearch .search-item-link:hover .image img {
+    transform: scale(1.05);
+}
+
+.listSearch .search-item .name {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+.listSearch .search-item .totalPrice {
+    font-weight: bold;
+    color: #2c5aa0;
+    text-align: right;
+    font-size: 14px;
+}
+
+.search-empty,
+.search-no-results,
+.search-error {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+}
+
+.search-empty p,
+.search-no-results p,
+.search-error p {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.search-empty small,
+.search-no-results small,
+.search-error small {
+    font-size: 12px;
+    color: #999;
+}
+
+.search-error {
+    color: #e74c3c;
+}
+
+.search-error p {
+    color: #e74c3c;
+}
+
+.hide {
+    display: none !important;
+}
+
+template {
+    display: none;
+}
+
+.search-loading {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+}
+
+.search-loading::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3498db;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .searchTab {
+        width: 100%;
+        left: -100%;
+    }
+    
+    body.showSearch .searchTab {
+        left: 0;
+    }
+    
+    .searchTab input[type="search"] {
+        width: calc(100% - 30px);
+        margin: 15px;
+    }
+    
+    .listSearch {
+        margin: 0 15px;
+    }
+    
+    .listSearch .search-item {
+        grid-template-columns: 60px 1fr 70px;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .listSearch .search-item .image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .listSearch .search-item .name {
+        font-size: 13px;
+    }
+    
+    .listSearch .search-item .totalPrice {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .searchTab h1 {
+        font-size: 1.3rem;
+        padding: 15px;
+    }
+    
+    .searchTab input[type="search"] {
+        height: 40px;
+        font-size: 15px;
+    }
+    
+    .listSearch .search-item {
+        grid-template-columns: 50px 1fr 60px;
+        gap: 8px;
+        padding: 8px;
+    }
+    
+    .listSearch .search-item .image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .listSearch .search-item .name {
+        font-size: 12px;
+    }
+    
+    .listSearch .search-item .totalPrice {
+        font-size: 12px;
+    }
+    
+    .search-empty,
+    .search-no-results,
+    .search-error {
+        padding: 30px 15px;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.searchTab.animate-in {
+    animation: slideInLeft 0.5s ease-out;
+}
+
+.searchTab.animate-out {
+    animation: slideOutLeft 0.5s ease-in;
+}
+
+.search-highlight {
+    background-color: #fff3cd;
+    padding: 1px 3px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
