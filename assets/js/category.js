@@ -284,7 +284,7 @@ function initializePage() {
 
 
     // Завантаження товарів
-    fetch('/assets/js/data/products.json')
+    fetch('./assets/js/data/products.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
