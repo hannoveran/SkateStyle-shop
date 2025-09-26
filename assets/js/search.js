@@ -26,7 +26,7 @@ search.addEventListener("input", e => {
     }) 
 });
 
-fetch('products/products.json')
+fetch(`${basePath}assets/js/data/products.json`)
     .then(res => res.json())
     .then(data => {
         listSearch.innerHTML = '';
