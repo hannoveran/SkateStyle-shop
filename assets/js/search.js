@@ -25,8 +25,8 @@ search.addEventListener("input", e => {
         product.element.classList.toggle("hide", !isVisible);
     }) 
 });
-const basePath = window.location.pathname.includes('/pages/') ? '../' : './';
-fetch(`${basePath}assets/js/data/products.json`)
+
+fetch(`./assets/js/data/products.json`)
     .then(res => res.json())
     .then(data => {
         listSearch.innerHTML = '';

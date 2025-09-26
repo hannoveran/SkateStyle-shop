@@ -16,22 +16,22 @@ function createFooter(options = {}) {
         <footer>
             <section class="footer">
                 <div class="footer-logo">
-                    <a href="./index.html">
-                        <img src="./assets/images/logo/logoBg.jpg" alt="Skate Style Logo">
+                    <a href="/index.html">
+                        <img src="/assets/images/logo/logoBg.jpg" alt="Skate Style Logo">
                     </a>
                 </div>
                 
                 <div class="footer-pages">
                     <h3>Сторінки</h3>
                     <ul>
-                        <li><a href="./index.html">Головна</a></li>
+                        <li><a href="/index.html">Головна</a></li>
                         <li><a href="#" onclick="toggleCart(event)">Кошик</a></li>
-                        <li><a href="./pages/category.html#type=women">Жіночий одяг</a></li>
-                        <li><a href="./pages/category.html#type=men">Чоловічий одяг</a></li>
-                        <li><a href="./pages/category.html#type=skates">Ковзани</a></li>
-                        <li><a href="./pages/category.html#type=accessories">Аксесуари</a></li>
-                        <li><a href="./pages/aboutUs.html">Про нас</a></li>
-                        <li><a href="./pages/user/account.html">Акаунт</a></li>
+                        <li><a href="/pages/category.html#type=women">Жіночий одяг</a></li>
+                        <li><a href="/pages/category.html#type=men">Чоловічий одяг</a></li>
+                        <li><a href="/pages/category.html#type=skates">Ковзани</a></li>
+                        <li><a href="/pages/category.html#type=accessories">Аксесуари</a></li>
+                        <li><a href="/pages/aboutUs.html">Про нас</a></li>
+                        <li><a href="/pages/user/account.html">Акаунт</a></li>
                     </ul>
                 </div>
                 
@@ -39,9 +39,9 @@ function createFooter(options = {}) {
                     <h3>Корисні посилання</h3>
                     <ul>
                         <li><a href="https://www.moyo.ua/ua/news/kak_vybrat_konki_poshagovaya_instrukciya_dlya_novichkov.html?srsltid=AfmBOorCi7uyFH3OH75NK09st1eelKuFXNc5tp2CokqJEmZNsnhjN98M" target="_blank" rel="noopener">Гайд як обрати ковзани</a></li>
-                        <li><a href="./pages/info/dimensionalGrid.html">Розмірна сітка</a></li>
-                        <li><a href="./pages/info/return.html">Повернення замовлення</a></li>
-                        <li><a href="./pages/info/delivery.html">Доставка</a></li>
+                        <li><a href="/pages/info/dimensionalGrid.html">Розмірна сітка</a></li>
+                        <li><a href="/pages/info/return.html">Повернення замовлення</a></li>
+                        <li><a href="/pages/info/delivery.html">Доставка</a></li>
                     </ul>
                 </div>
                 

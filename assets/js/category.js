@@ -282,9 +282,9 @@ function initializePage() {
         h1Element.textContent = pageTitle;
     }
 
-    const basePath = window.location.pathname.includes('/pages/') ? '../' : './';
+    
     // Завантаження товарів
-    fetch(`${basePath}assets/js/data/products.json`)
+    fetch(`./assets/js/data/products.json`)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
