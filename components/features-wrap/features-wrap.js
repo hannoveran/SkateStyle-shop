@@ -2,25 +2,25 @@ function createFeaturesWrap(options = {}) {
     const defaults = {
         features: [
             {
-                image: '../assets/images/features-wrap/box.png',
+                image: './assets/images/features-wrap/box.png',
                 alt: 'Гарантія якості',
                 title: 'Гарантія якості',
                 description: 'Кожен товар проходить ретельну <br> перевірку перед відправкою.'
             },
             {
-                image: '../assets/images/features-wrap/deliveryTruck.png',
+                image: './assets/images/features-wrap/deliveryTruck.png',
                 alt: 'Безкоштовна доставка',
                 title: 'Безкоштовна доставка',
                 description: 'Ми доставимо ваше замовлення <br> безкоштовно при покупці 10.000.'
             },
             {
-                image: '../assets/images/features-wrap/prepayment.png',
+                image: './assets/images/features-wrap/prepayment.png',
                 alt: 'Зручна оплата',
                 title: 'Зручна оплата',
                 description: 'Приймаємо оплату картками, <br> онлайн-платежами та післяплатою.'
             },
             {
-                image: '../assets/images/features-wrap/exchange.png',
+                image: './assets/images/features-wrap/exchange.png',
                 alt: 'Легке повернення',
                 title: 'Легке повернення',
                 description: 'Можливість повернення або обміну <br> товару протягом 14 днів.'

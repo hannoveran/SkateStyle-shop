@@ -2,19 +2,19 @@ function createFeatures(options = {}) {
     const defaults = {
         features: [
             {
-                image: '../assets/images/features/iceSkate.png',
+                image: './assets/images/features/iceSkate.png',
                 alt: 'Ковзани',
                 title: 'Професійні ковзани',
                 description: 'Якісні ковзани для спортсменів будь-якого <br> рівня – від початківців до професіоналів.'
             },
             {
-                image: '../assets/images/features/sewing.png',
+                image: './assets/images/features/sewing.png',
                 alt: 'Шиття',
                 title: 'Індивідуальне пошиття',
                 description: 'Створюємо костюми для виступів, що <br> поєднують стиль, комфорт і функціональність.'
             },
             {
-                image: '../assets/images/features/fabric.png',
+                image: './assets/images/features/fabric.png',
                 alt: 'Тканини',
                 title: 'Ексклюзивні тканини',
                 description: 'Високоякісні матеріали для створення костюмів, <br> що забезпечують ідеальну посадку та свободу рухів.'
