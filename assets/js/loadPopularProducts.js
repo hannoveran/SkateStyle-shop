@@ -5,8 +5,8 @@
 
 function loadPopularProducts() {
     const productsGrid = document.getElementById('popular-products-list');
-    const basePath = window.location.pathname.includes('/pages/') ? '../' : './';
-    fetch(`${basePath}assets/js/data/products.json`)
+    //const basePath = window.location.pathname.includes('/pages/') ? '../' : './';
+    fetch(`./assets/js/data/products.json`)
         .then(res => {
             if (!res.ok) {
                 throw new Error(`HTTP error! status: ${res.status}`);
