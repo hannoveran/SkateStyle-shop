@@ -59,7 +59,7 @@ function loadCartData() {
         document.querySelector('.returnCart .list').innerHTML = '<p>Помилка завантаження кошика</p>';
         return;
     }
-
+    const basePath = window.location.pathname.includes('/pages/') ? '../' : './';
     fetch(`${basePath}assets/js/data/products.json`)
         .then(res => {
             if (!res.ok) {
