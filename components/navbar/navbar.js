@@ -19,11 +19,11 @@ function createNavbar(options = {}) {
             <div class="nav-links main-links">
                 <nav>
                     <ul>
-                        <li><a href="./pages/category.html#type=women" ${config.currentPage === 'women' ? 'class="active"' : ''}>Жінкам</a></li>
-                        <li><a href="./pages/category.html#type=men" ${config.currentPage === 'men' ? 'class="active"' : ''}>Чоловікам</a></li>
-                        <li><a href="./pages/category.html#type=skates" ${config.currentPage === 'skates' ? 'class="active"' : ''}>Ковзани</a></li>
-                        <li><a href="./pages/category.html#type=accessories" ${config.currentPage === 'accessories' ? 'class="active"' : ''}>Аксесуари</a></li>
-                        <li><a href="./pages/aboutUs.html" ${config.currentPage === 'about' ? 'class="active"' : ''}>Про нас</a></li>
+                        <li><a href="../pages/category.html#type=women" ${config.currentPage === 'women' ? 'class="active"' : ''}>Жінкам</a></li>
+                        <li><a href="../pages/category.html#type=men" ${config.currentPage === 'men' ? 'class="active"' : ''}>Чоловікам</a></li>
+                        <li><a href="../pages/category.html#type=skates" ${config.currentPage === 'skates' ? 'class="active"' : ''}>Ковзани</a></li>
+                        <li><a href="../pages/category.html#type=accessories" ${config.currentPage === 'accessories' ? 'class="active"' : ''}>Аксесуари</a></li>
+                        <li><a href="../pages/aboutUs.html" ${config.currentPage === 'about' ? 'class="active"' : ''}>Про нас</a></li>
                         <li><a href="#phone-number">Контакти</a></li>
                     </ul>
                 </nav>
